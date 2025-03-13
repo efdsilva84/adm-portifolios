@@ -1,0 +1,183 @@
+
+<div class="card star d-flex" *ngFor="let item of dados" style="margin-top: 10px;">
+  <div class="card-header">
+    <h5>Landing Page Starbucks &nbsp; <button class="btn btn-primary" (click)="editarStar(item)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Editar</button></h5>
+  </div>
+  <div class="card areaa-card-all">
+    <div class="area--card">
+      <h5>Titulo Banner</h5>
+      <div class="card-body">
+        {{ item.titulo_banner }}
+      </div>
+      <hr>
+    </div>
+    <div class="area--card">
+      <h5>Quebra Título</h5>
+      <div class="card-body">
+        {{ item.quebra_titulo }}
+      </div>
+      <hr>
+
+    </div>
+
+    <div class="area--card">
+      <h5>Frase 1</h5>
+      <div class="card-body">
+        {{ item.frase_1 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Título 1</h5>
+      <div class="card-body">
+        {{ item.titulo_1 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Título 2</h5>
+      <div class="card-body">
+        {{ item.titulo_2 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Título 3</h5>
+      <div class="card-body">
+        {{ item.titulo_3 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Título 4</h5>
+      <div class="card-body">
+        {{ item.titulo_4 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Mensagem Titulo 1</h5>
+      <div class="card-body">
+        {{ item.msg }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Mensagem Título 2</h5>
+      <div class="card-body">
+        {{ item.msg_titulo_2 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Mensagem Título 3</h5>
+      <div class="card-body">
+        {{ item.msg_titulo_3 }}
+      </div>
+      <hr>
+    </div>
+
+    <div class="area--card">
+      <h5>Mensagem Título 4</h5>
+      <div class="card-body">
+        {{ item.msg_titulo_4 }}
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editando Textos Starbucks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Titulo Banner</label>
+            <input type="text" class="form-control" [(ngModel)]="starbucksObj.titulo_banner"  name="titulo_banner" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Quebra Titulo</label>
+            <input type="text" class="form-control"   [(ngModel)]="starbucksObj.quebra_titulo" name="quebra_titulo">
+          </div>
+          <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Frase 1</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.frase_1" name="frase_1">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Titulo 1</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.titulo_1" name="titulo_1">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Titulo 2</label>
+              <input type="text" class="form-control"  [(ngModel)]="starbucksObj.titulo_2" name="titulo_2">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Titulo 3</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.titulo_3" name="titulo_3">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Titulo 4</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.titulo_4" name="titulo_4">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Mensagem</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.msg" name="msg">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Mensagem Titulo 2</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.msg_titulo_2" name="msg_titulo_2">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Mensagem Titulo 3</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.msg_titulo_3" name="msg_titulo_3">
+            </div>
+      
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Mensagem Titulo 4</label>
+              <input type="text" class="form-control"   [(ngModel)]="starbucksObj.msg_titulo_4" name="msg_titulo_4">
+            </div>
+      
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" (click)="sub(starbucksObj)">Salvar Alterações</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

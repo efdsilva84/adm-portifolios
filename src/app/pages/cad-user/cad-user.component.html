@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="conteudo">
+    <h3>Novo Usuário Portaria</h3>
+    <form class="row g-3" [formGroup]="dadosForm" (ngSubmit)="caduser(dadosForm)" #formDir="ngForm" >
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Nome Completo:</label>
+        <input type="text" class="form-control" placeholder="Nome Completo" formControlName="nome">
+      </div>
+      <div class="col-md-4">
+        <label for="inputPassword4" class="form-label">CPF:</label>
+        <input type="text" class="form-control" placeholder="CPF" formControlName="cpf">
+      </div>
+      <div class="col-4">
+        <label for="inputAddress" class="form-label">Matrícula:</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Matrícula" formControlName="matricula">
+      </div>
+      <div class="col-4">
+        <label for="inputAddress2" class="form-label">Senha:</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Senha" formControlName="senha">
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Líder:</label>
+        <select id="inputState" class="form-select" formControlName="fk_lider">
+          <option selected></option>
+          <option *ngFor="let item of listaLideres" value="{{item.id_lider}}">{{item.id_lider}}-{{item.nome_lider}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Local de Trabalho:</label>
+        <select id="inputState" class="form-select" formControlName="fk_local_trabalho">
+          <option selected></option>
+          <option *ngFor="let item of listaLocal" value="{{item.id_local}}">{{item.local_trabalho}}</option>
+        </select>
+      </div>
+
+
+      <div class="col-12">
+        <button type="submit" class="btn sv">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+</div>

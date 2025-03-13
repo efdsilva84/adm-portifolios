@@ -1,0 +1,11 @@
+.card{
+    padding: 10px;
+}
+
+.star{
+    margin-top: 20px;
+}
+.areaa-card-all{
+    width: 100%;
+    display: flex;
+}

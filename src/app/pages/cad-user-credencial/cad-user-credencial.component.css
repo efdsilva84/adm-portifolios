@@ -1,0 +1,25 @@
+.conteudo{
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.conteudo h3{
+  margin: 1em;
+  text-align: left!important;
+}
+.conteudo form{
+  border:  1px solid #eee;
+  border-radius: 10px;
+  padding: 2em;
+}
+.sv{
+  background-color: brown;
+  color: #fff;
+}
+.sv:hover{
+  background-color: #fff;
+  color: brown;
+  border: 1px solid brown;
+}

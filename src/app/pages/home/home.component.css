@@ -1,0 +1,17 @@
+.folios{
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin-top: 50px;
+    border-radius: 10px;
+    align-items: center;
+    img, h6{
+        padding: 10px;
+    }
+    border: 1px solid #c4c0c0;
+    cursor: pointer;
+}
+.folios img{
+    width: 48px;
+    height: 48px;
+}

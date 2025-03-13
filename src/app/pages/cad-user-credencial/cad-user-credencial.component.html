@@ -1,0 +1,67 @@
+<div class="conteudo">
+
+<h3> Nova Entrada</h3>
+<form class="row g-3">
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label">Usuário:</label>
+    <input type="text" class="form-control" id="inputEmail4" placeholder="Nome do Usuário">
+  </div>
+  <div class="col-md-4">
+    <label for="inputPassword4" class="form-label">N° CNH:</label>
+    <input type="text" class="form-control"  placeholder="Número da CNH">
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Empresa:</label>
+    <select id="inputState" class="form-select">
+      <option selected></option>
+      <option *ngFor="let item of listaEmpresas" value="{{item.id_empresa}}" >{{item.nome_empresa}}</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputState" class="form-label">Tipo de Acesso:</label>
+    <select id="inputState" class="form-select">
+      <option selected></option>
+      <option *ngFor="let item of listaAcessos" value="{{item.id_acesso}}">{{item.horario_acesso}}</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputPassword4" class="form-label">Tipo Veículo:</label>
+    <input type="text" class="form-control"  placeholder="Número da CNH">
+  </div>
+  <div class="col-md-2">
+    <label for="inputPassword4" class="form-label">Marca:</label>
+    <input type="text" class="form-control"  placeholder="Número da CNH">
+  </div>
+  <div class="col-md-2">
+    <label for="inputCity" class="form-label">Modelo:</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-2">
+    <label for="inputCity" class="form-label">Cor:</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+
+  <div class="col-md-2">
+    <label for="inputCity" class="form-label">Placa:</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+
+  <div class="col-md-2">
+    <label for="inputCity" class="form-label">N° Credencial:</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn sv">Salvar</button>
+  </div>
+</form>
+</div>
+
