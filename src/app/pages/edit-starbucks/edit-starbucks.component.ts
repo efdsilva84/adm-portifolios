@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import  StarbucksModel  from 'src/app/models/Starbucks';
 import { StarbucksService } from 'src/app/services/starbucks.service';
-import { Modal } from 'bootstrap';
-import Starbucks from 'src/app/models/Starbucks';
+
 
 
 @Component({
@@ -56,22 +55,22 @@ initialForm(){
     })
   }
 
-//   createForm(){
-//     this.dadosForm = new FormGroup({
-//       titulo_banner: new FormControl(this.starbucksObj.titulo_banner, [Validators.required]),
-//       quebra_titulo: new FormControl(this.starbucksObj.quebra_titulo, [Validators.required]),
-//       frase_1: new FormControl(this.starbucksObj.frase_1, [Validators.required]),
-//       titulo_1: new FormControl(this.starbucksObj.titulo_1, [Validators.required]),
-//       titulo_2: new FormControl(this.starbucksObj.titulo_2, [Validators.required]),
-//       titulo_3: new FormControl(this.starbucksObj.titulo_3, [Validators.required]),
-//       titulo_4: new FormControl(this.starbucksObj.titulo_4, [Validators.required]),
-//       msg: new FormControl(this.starbucksObj.msg, [Validators.required]),
-//       msg_titulo_2: new FormControl(this.starbucksObj.msg_titulo_2, [Validators.required]),
-//       msg_titulo_3: new FormControl(this.starbucksObj.msg_titulo_3, [Validators.required]),
-//       msg_titulo_4: new FormControl(this.starbucksObj.msg_titulo_4, [Validators.required]),
+  createForm(){
+    this.dadosForm = new FormGroup({
+      titulo_banner: new FormControl(this.starbucksObj.titulo_banner, [Validators.required]),
+      quebra_titulo: new FormControl(this.starbucksObj.quebra_titulo, [Validators.required]),
+      frase_1: new FormControl(this.starbucksObj.frase_1, [Validators.required]),
+      titulo_1: new FormControl(this.starbucksObj.titulo_1, [Validators.required]),
+      titulo_2: new FormControl(this.starbucksObj.titulo_2, [Validators.required]),
+      titulo_3: new FormControl(this.starbucksObj.titulo_3, [Validators.required]),
+      titulo_4: new FormControl(this.starbucksObj.titulo_4, [Validators.required]),
+      msg: new FormControl(this.starbucksObj.msg, [Validators.required]),
+      msg_titulo_2: new FormControl(this.starbucksObj.msg_titulo_2, [Validators.required]),
+      msg_titulo_3: new FormControl(this.starbucksObj.msg_titulo_3, [Validators.required]),
+      msg_titulo_4: new FormControl(this.starbucksObj.msg_titulo_4, [Validators.required]),
 
-// })
-//   }
+})
+  }
 
   editarStar(item:any){
     this.starbucksObj = item;

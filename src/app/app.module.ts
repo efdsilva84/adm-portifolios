@@ -13,6 +13,7 @@ import { CadUserComponent } from './pages/cad-user/cad-user.component';
 import { ListaUserComponent } from './pages/lista-user/lista-user.component';
 import { CadUserCredencialComponent } from './pages/cad-user-credencial/cad-user-credencial.component';
 import { EditStarbucksComponent } from './pages/edit-starbucks/edit-starbucks.component';
+import { EBurgerComponent } from './pages/e-burger/e-burger.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditStarbucksComponent } from './pages/edit-starbucks/edit-starbucks.co
     CadUserComponent,
     ListaUserComponent,
     CadUserCredencialComponent,
-    EditStarbucksComponent
+    EditStarbucksComponent,
+    EBurgerComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { CadUserComponent } from './pages/cad-user/cad-user.component';
 import { ListaUserComponent } from './pages/lista-user/lista-user.component';
 import { CadUserCredencialComponent } from './pages/cad-user-credencial/cad-user-credencial.component';
 import { EditStarbucksComponent } from './pages/edit-starbucks/edit-starbucks.component';
+import { EBurgerComponent } from './pages/e-burger/e-burger.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'cad-user', component: CadUserComponent},
   {path: 'listar-user', component: ListaUserComponent},
   {path: 'cad-cred', component: CadUserCredencialComponent},
-  {path:'edit-star', component: EditStarbucksComponent}
+  {path:'edit-star', component: EditStarbucksComponent},
+  {path:'e-burger', component: EBurgerComponent}
 
 ];
 

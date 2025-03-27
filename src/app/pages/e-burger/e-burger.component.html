@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="" [formGroup]="uploadForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-3" *ngFor="let file of uploadFilesNames">
+                <img src="{{ file }}" alt="">
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nome Burger:</label>
+            <input type="text" class="form-control" formControlName="burger" >
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Detalhes</label>
+            <input type="text" class="form-control" formControlName="details">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Preço:</label>
+            <input type="text" class="form-control" formControlName="preco">
+          </div>
+        <input type="file" class="form-control" (change)="onFileSelected($event)" formControlName="img_name" >
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+ 
+</div>
