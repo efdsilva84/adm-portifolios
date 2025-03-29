@@ -1,27 +1,95 @@
 <div class="container">
-    <form action="" [formGroup]="uploadForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
-        <div class="row">
-            <div class="col-3" *ngFor="let file of uploadFilesNames">
-                <img src="{{ file }}" alt="">
+
+  <div class="row p-1">
+    <div class="col">
+      <input type="text" class="form-control form-control-sm" placeholder="Burger" aria-label="First name">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary btn-sm">Buscar</button>
+      <button type="button" class="btn btn-success btn-sm nv" data-bs-toggle="modal" data-bs-target="#exampleModal">Novo Burger</button>
+
+    </div>
+  </div>
+
+  <table class="table table-striped tb">
+    <thead>
+      <tr>
+        <th scope="col">Imagem</th>
+
+        <th scope="col">Burger</th>
+        <th scope="col">Detalhes</th>
+        <th scope="col">Preço</th>
+        <th scope="col">ações</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listBurger">
+        <th><img width="40px" height="40px" src="{{ url_img }}{{ item.imagem }}" alt="">
+        </th>
+        <th scope="row">{{item.burger }}</th>
+        <td>{{ item.details }}</td>
+        <td>{{ item.preco }}<i class="bi bi-pencil-square"></i></td>
+        <td>
+          <a href=""><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
+          <a href=""><i class="fa-solid fa-trash"></i></a>
+        </td>
+
+
+      </tr>
+   
+    </tbody>
+  </table>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Burger</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" [formGroup]="uploadForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+          <input type="file" class="form-control" (change)="onFileSelected($event)" formControlName="img_name" >
+
+          <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Nome Burger:</label>
+              <input type="text" class="form-control" formControlName="burger" >
             </div>
-        </div>
   
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nome Burger:</label>
-            <input type="text" class="form-control" formControlName="burger" >
-          </div>
+            <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Detalhes</label>
+              <input type="text" class="form-control" formControlName="details">
+            </div>
+  
+            <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Preço:</label>
+              <input type="text" class="form-control" formControlName="preco">
+            </div>
+          <button type="submit" class="btn btn-primary bt-env">Enviar</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Detalhes</label>
-            <input type="text" class="form-control" formControlName="details">
-          </div>
 
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Preço:</label>
-            <input type="text" class="form-control" formControlName="preco">
-          </div>
-        <input type="file" class="form-control" (change)="onFileSelected($event)" formControlName="img_name" >
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+
+
+
+
+
+
+
+
+
  
 </div>

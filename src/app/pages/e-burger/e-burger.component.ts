@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import EburgerNodel from 'src/app/models/Eburger';
+import { ApiService } from 'src/app/services/api.service';
 import { EburgerService } from 'src/app/services/eburger.service';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-e-burger',
@@ -13,10 +16,13 @@ export class EBurgerComponent {
   eburgerObj: EburgerNodel = new EburgerNodel();
   selectedFile: File | null = null;  // Armazena a imagem selecionada
   uploadForm!: FormGroup;
+  listBurger:any;
+  url_img: string = this.api.url_sistema + "application/imagens/";
+
 
 
   
-      constructor(private eburger: EburgerService, private fb: FormBuilder){
+      constructor(private eburger: EburgerService, private fb: FormBuilder, private api:ApiService){
         this.uploadForm = this.fb.group({
           burger: ['', Validators.required],
           details: ['', Validators.required],
@@ -30,12 +36,14 @@ export class EBurgerComponent {
       ngOnInit(){
         this.getAllBurgers();
         // this.createPlatform();
+        console.log("ulr imagem", this.url_img);
       }
 
 
       getAllBurgers(){
         this.eburger.allBurgers().subscribe((data:any)=>{
           console.log("todos os hamburgers", data);
+          this.listBurger = data;
         })
       }
 
@@ -67,9 +75,11 @@ export class EBurgerComponent {
   
         this.eburger.newBurger(this.uploadForm.value).subscribe((data:any)=>{
           console.log("data edcarlos furta da silva", data);
+          this.getAllBurgers();
+          this.uploadForm.reset();
           // debugger;
           // console.log("função imagem", data);
-        })
+        });
       }
 
     // Captura a imagem selecionada
